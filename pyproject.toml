@@ -1,0 +1,70 @@
+[project]
+name = "sentinel-engine-145"
+version = "0.1.0"
+description = "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "Alan Vo", email = "alanvo@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn>=0.29.0",
+    "pydantic>=2.7.0",
+    "pydantic-settings>=2.3.0",
+    "typer>=0.12.0",
+    "rich>=13.7.0",
+    "pyyaml>=6.0.1",
+    "httpx>=0.27.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2.0",
+    "pytest-asyncio>=0.23.0",
+    "httpx>=0.27.0",
+    "ruff>=0.4.0",
+]
+browser = [
+    "playwright>=1.40.0",
+]
+cookies = [
+    "browser-cookie3>=0.23.0",
+]
+all = [
+    "sentinel-engine-145[browser,cookies]",
+]
+
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.2.0",
+    "pytest-asyncio>=0.23.0",
+    "httpx>=0.27.0",
+    "ruff>=0.4.0",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+select = ["E", "F", "I", "UP", "B", "C4", "SIM", "PIE", "T20", "ARG", "PTH", "ERA", "PL", "TRY", "NPY", "RSE", "RET", "PTH"]
+ignore = ["S101", "S106", "T201", "PTH118", "PTH120"]
+fixable = ["E", "F", "I", "UP", "B", "SIM", "PIE", "T20", "ARG", "RSE", "RET", "PTH"]
+unfixable = ["C4", "PL", "NPY", "ERA", "TRY", "S101", "S106", "T201", "PTH118", "PTH120"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]

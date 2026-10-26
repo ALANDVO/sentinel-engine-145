@@ -1,2 +1,6 @@
-# sentinel-engine-145
-Alan Vo | Give your AI agent eyes to see the entire internet. Read &amp; search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.
+# sentinel-engine-145 — Alan Vo
+
+> Work in progress. This checkpoint may be incomplete or fail tests. See PLAN.md and STATUS.md before use.
+
+
+Maintainer: Alan Vo <alanvo@gmail.com>

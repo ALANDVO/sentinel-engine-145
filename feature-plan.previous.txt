@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "current_feature": "core-skeleton",
+  "features": [
+    {
+      "id": "core-skeleton",
+      "title": "Core FastAPI/React skeleton with CLI entry point",
+      "status": "in_progress",
+      "acceptance": [
+        "FastAPI server starts and serves health endpoint",
+        "CLI entry point 'sentinel-engine' runs and shows help",
+        "Basic project structure with pyproject.toml, config, and CLI module",
+        "Unit tests for health endpoint and CLI help"
+      ],
+      "implementation": [
+        "pyproject.toml",
+        "src/sentinel_engine/__init__.py",
+        "src/sentinel_engine/main.py",
+        "src/sentinel_engine/cli.py",
+        "src/sentinel_engine/config.py",
+        "tests/test_health.py",
+        "tests/test_cli.py"
+      ],
+      "tests": [
+        "tests/test_health.py",
+        "tests/test_cli.py"
+      ]
+    },
+    {
+      "id": "channel-registry",
+      "title": "Channel registry and base channel classes",
+      "status": "planned",
+      "acceptance": [
+        "Base Channel class with search/fetch interface",
+        "Channel registry to manage available channels",
+        "At least one mock channel implementation for testing"
+      ],
+      "implementation": [],
+      "tests": []
+    },
+    {
+      "id": "search-workflow",
+      "title": "End-to-end search workflow (CLI -> API -> Channel -> Results)",
+      "status": "planned",
+      "acceptance": [
+        "CLI 'search' command queries channels and returns results",
+        "API endpoint '/search' accepts query and returns aggregated results",
+        "Integration test covering full flow"
+      ],
+      "implementation": [],
+      "tests": []
+    },
+    {
+      "id": "platform-adapters",
+      "title": "Platform adapters (Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu)",
+      "status": "planned",
+      "acceptance": [
+        "Adapter base class and registry",
+        "At least 3 platform adapters with mock implementations",
+        "Adapter health check via doctor command"
+      ],
+      "implementation": [],
+      "tests": []
+    },
+    {
+      "id": "config-management",
+      "title": "Configuration management (YAML config, env vars, configure command)",
+      "status": "planned",
+      "acceptance": [
+        "YAML config file at ~/.sentinel-engine/config.yaml",
+        'CLI "configure" command to set keys',
+        "Environment variable export command"
+      ],
+      "implementation": [],
+      "tests": []
+    },
+    {
+      "id": "doctor-command",
+      "title": "Doctor command for health checks",
+      "status": "planned",
+      "acceptance": [
+        "Doctor command checks all channels and adapters",
+        "Reports active_backend for each platform",
+        "JSON output option for scripting"
+      ],
+      "implementation": [],
+      "tests": []
+    }
+  ]
+}
