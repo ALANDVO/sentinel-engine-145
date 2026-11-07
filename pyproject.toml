@@ -26,6 +26,9 @@ dependencies = [
     "httpx>=0.27.0",
 ]
 
+[project.scripts]
+sentinel-engine = "sentinel_engine.cli:app"
+
 [project.optional-dependencies]
 dev = [
     "pytest>=8.2.0",

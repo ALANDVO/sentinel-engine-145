@@ -1,0 +1,2 @@
+[console_scripts]
+sentinel-engine = sentinel_engine.cli:app
