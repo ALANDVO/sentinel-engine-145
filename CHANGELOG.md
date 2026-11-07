@@ -1,10 +1,18 @@
 # Changelog
 
-## 1.1.0 — work-in-progress checkpoint
+## 1.2.0 — work-in-progress checkpoint
 
 Partial code published for continued development. Known issues: STATUS.md.
+
+## 1.1.0 — work-in-progress checkpoint
+
+Completed core skeleton:
+- FastAPI application with `/health` and `/` endpoints
+- Typer CLI with `version`, `config-show`, and `--help` commands
+- Configuration module with platform configs and YAML/env loading
+- Unit tests for health endpoints and CLI commands (5 tests passing)
+- Ruff linting clean
 
 ## 1.0.0 — work-in-progress checkpoint
 
 Partial code published for continued development. Known issues: STATUS.md.
-
