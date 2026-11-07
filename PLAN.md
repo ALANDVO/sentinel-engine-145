@@ -67,3 +67,6 @@ Acceptance:
 - Reports active_backend for each platform
 - JSON output option for scripting
 
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)

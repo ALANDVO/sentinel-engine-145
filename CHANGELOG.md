@@ -16,3 +16,7 @@ Completed core skeleton:
 ## 1.0.0 — work-in-progress checkpoint
 
 Partial code published for continued development. Known issues: STATUS.md.
+
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)
