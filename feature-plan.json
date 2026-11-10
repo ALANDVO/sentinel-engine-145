@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "current_feature": "core-skeleton",
+  "current_feature": "channel-registry",
   "features": [
     {
       "id": "core-skeleton",
@@ -29,14 +29,22 @@
     {
       "id": "channel-registry",
       "title": "Channel registry and base channel classes",
-      "status": "planned",
+      "status": "done",
       "acceptance": [
         "Base Channel class with search/fetch interface",
         "Channel registry to manage available channels",
         "At least one mock channel implementation for testing"
       ],
-      "implementation": [],
-      "tests": []
+      "implementation": [
+        "src/sentinel_engine/channels/base.py",
+        "src/sentinel_engine/channels/registry.py",
+        "src/sentinel_engine/channels/mock.py",
+        "src/sentinel_engine/channels/__init__.py",
+        "tests/test_channels.py"
+      ],
+      "tests": [
+        "tests/test_channels.py"
+      ]
     },
     {
       "id": "search-workflow",
