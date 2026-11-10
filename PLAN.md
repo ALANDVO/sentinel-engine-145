@@ -4,7 +4,7 @@ Each round completes one feature or repair. Future items are planned, not implem
 
 ## Current round
 
-core-skeleton
+channel-registry
 
 ## Roadmap
 
@@ -24,12 +24,16 @@ Tests: `tests/test_health.py`, `tests/test_cli.py`
 
 ### channel-registry — Channel registry and base channel classes
 
-Status: planned
+Status: done
 
 Acceptance:
 - Base Channel class with search/fetch interface
 - Channel registry to manage available channels
 - At least one mock channel implementation for testing
+
+Implementation: `src/sentinel_engine/channels/base.py`, `src/sentinel_engine/channels/registry.py`, `src/sentinel_engine/channels/mock.py`, `src/sentinel_engine/channels/__init__.py`, `tests/test_channels.py`
+
+Tests: `tests/test_channels.py`
 
 ### search-workflow — End-to-end search workflow (CLI -> API -> Channel -> Results)
 
