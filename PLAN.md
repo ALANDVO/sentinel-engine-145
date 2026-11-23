@@ -4,7 +4,7 @@ Each round completes one feature or repair. Future items are planned, not implem
 
 ## Current round
 
-channel-registry
+search-workflow
 
 ## Roadmap
 
@@ -37,12 +37,16 @@ Tests: `tests/test_channels.py`
 
 ### search-workflow — End-to-end search workflow (CLI -> API -> Channel -> Results)
 
-Status: planned
+Status: done
 
 Acceptance:
 - CLI 'search' command queries channels and returns results
 - API endpoint '/search' accepts query and returns aggregated results
 - Integration test covering full flow
+
+Implementation: `src/sentinel_engine/cli.py`, `src/sentinel_engine/main.py`, `tests/test_search_workflow.py`
+
+Tests: `tests/test_search_workflow.py`
 
 ### platform-adapters — Platform adapters (Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu)
 

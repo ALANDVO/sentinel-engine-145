@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "current_feature": "channel-registry",
+  "current_feature": "search-workflow",
   "features": [
     {
       "id": "core-skeleton",
@@ -49,14 +49,20 @@
     {
       "id": "search-workflow",
       "title": "End-to-end search workflow (CLI -> API -> Channel -> Results)",
-      "status": "planned",
+      "status": "done",
       "acceptance": [
         "CLI 'search' command queries channels and returns results",
         "API endpoint '/search' accepts query and returns aggregated results",
         "Integration test covering full flow"
       ],
-      "implementation": [],
-      "tests": []
+      "implementation": [
+        "src/sentinel_engine/cli.py",
+        "src/sentinel_engine/main.py",
+        "tests/test_search_workflow.py"
+      ],
+      "tests": [
+        "tests/test_search_workflow.py"
+      ]
     },
     {
       "id": "platform-adapters",
