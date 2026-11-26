@@ -50,12 +50,16 @@ Tests: `tests/test_search_workflow.py`
 
 ### platform-adapters — Platform adapters (Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu)
 
-Status: planned
+Status: in_progress
 
 Acceptance:
 - Adapter base class and registry
-- At least 3 platform adapters with mock implementations
+- At least 3 platform adapters with mock implementations (Twitter, Reddit, YouTube)
 - Adapter health check via doctor command
+
+Implementation: `src/sentinel_engine/adapters/base.py`, `src/sentinel_engine/adapters/__init__.py`, `src/sentinel_engine/adapters/twitter.py`, `src/sentinel_engine/adapters/reddit.py`, `src/sentinel_engine/adapters/youtube.py`
+
+Tests: `tests/test_adapters.py`
 
 ### config-management — Configuration management (YAML config, env vars, configure command)
 
