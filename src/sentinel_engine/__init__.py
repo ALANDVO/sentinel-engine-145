@@ -8,6 +8,13 @@ from sentinel_engine.channels import (
     SearchResult,
     get_registry,
 )
+from sentinel_engine.adapters import (
+    Adapter,
+    AdapterRegistry,
+    TwitterAdapter,
+    RedditAdapter,
+    YouTubeAdapter,
+)
 from sentinel_engine.config import Config, PlatformConfig, get_config
 
 __version__ = "0.1.0"
@@ -22,6 +29,11 @@ __all__ = [
     "MockChannel",
     "PlatformConfig",
     "SearchResult",
+    "Adapter",
+    "AdapterRegistry",
+    "TwitterAdapter",
+    "RedditAdapter",
+    "YouTubeAdapter",
     "get_config",
     "get_registry",
 ]

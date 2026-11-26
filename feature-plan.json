@@ -67,14 +67,22 @@
     {
       "id": "platform-adapters",
       "title": "Platform adapters (Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu)",
-      "status": "planned",
+      "status": "in_progress",
       "acceptance": [
         "Adapter base class and registry",
-        "At least 3 platform adapters with mock implementations",
+        "At least 3 platform adapters with mock implementations (Twitter, Reddit, YouTube)",
         "Adapter health check via doctor command"
       ],
-      "implementation": [],
-      "tests": []
+      "implementation": [
+        "src/sentinel_engine/adapters/base.py",
+        "src/sentinel_engine/adapters/__init__.py",
+        "src/sentinel_engine/adapters/twitter.py",
+        "src/sentinel_engine/adapters/reddit.py",
+        "src/sentinel_engine/adapters/youtube.py"
+      ],
+      "tests": [
+        "tests/test_adapters.py"
+      ]
     },
     {
       "id": "config-management",
